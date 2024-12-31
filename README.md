@@ -1,15 +1,3 @@
-# totem-spark
-
-> TotemFi Spark
-
-## Getting Started
-
-```sh
-npm install
-npm start
-```
-
-Now open [http://localhost:3080](http://localhost:3080).
 
 ## Features
 
