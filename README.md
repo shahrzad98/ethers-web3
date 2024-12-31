@@ -80,4 +80,3 @@ MIT © [](https://github.com/)
 [karma]: https://karma-runner.github.io/0.13/index.html
 [mocha]: https://mochajs.org/
 
-t
