@@ -1,0 +1,99 @@
+@import "styles/mixin/theme";
+
+$themes: (
+    light: (),
+    dark: (),
+);
+
+.spark-claim-details {
+    background-color: #191d23;
+    margin-left: -7px;
+    width: calc(100% + 14px);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    > div {
+        max-width: 1000px;
+    }
+
+    &-unstake {
+        padding: 50px;
+        height: 100%;
+        align-items: flex-end;
+        &-item {
+            &.has-border {
+                border: 1px solid #4a4a4a;
+            }
+
+            display: flex;
+            justify-content: space-between;
+
+            background-color: #24282e;
+            padding: 15px;
+
+            &-label {
+                color: var(--color-white);
+            }
+
+            &-value {
+            }
+
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            max-width: 345px;
+            width: 100%;
+        }
+
+        &-btn {
+            margin-top: 20px;
+        }
+    }
+
+    &-purchase {
+        padding: 50px;
+        height: 100%;
+        align-items: flex-end;
+
+        &-item {
+            &.has-border {
+                border: 1px solid #4a4a4a;
+            }
+
+            display: flex;
+            justify-content: space-between;
+
+            background-color: #24282e;
+            padding: 15px;
+
+            &-label {
+                color: var(--color-white);
+            }
+
+            &-value {
+            }
+
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            max-width: 345px;
+            width: 100%;
+        }
+        &-btn {
+            margin-top: 20px;
+        }
+    }
+
+    .ui-label {
+        width: 100%;
+        max-width: 325px;
+    }
+    button {
+        max-width: 325px;
+    }
+}

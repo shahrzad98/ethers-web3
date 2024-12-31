@@ -1,0 +1,16 @@
+@import "styles/mixin/theme";
+
+$themes: (
+    light: (
+        project-team-investors-bg-color: var(--color-gray-2),
+    ),
+    dark: (
+        project-team-investors-bg-color: var(--color-white),
+    ),
+);
+
+.project-team-investors {
+    @include themify() {
+        // background-color: themed("project-team-investors-bg-color");
+    }
+}

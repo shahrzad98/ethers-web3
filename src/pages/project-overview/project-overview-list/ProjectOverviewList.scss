@@ -1,0 +1,15 @@
+@import "styles/mixin/theme";
+
+$themes: (light: (project-overview-list-bg-color: var(--color-gray-2),
+    ),
+    dark: (project-overview-list-bg-color: var(--color-white),
+    ),
+);
+
+.project-overview-list {
+    @include themify() {
+        // background-color: themed("project-overview-list-bg-color");
+    }
+
+    margin-bottom: 7.5px;
+}

@@ -1,0 +1,22 @@
+@import "styles/mixin/theme";
+
+$themes: (light: (project-info-bg-color: var(--color-gray-2),
+    ),
+    dark: (project-info-bg-color: var(--color-white),
+    ),
+);
+
+.project-info {
+    @include themify() {
+        // background-color: themed("project-info-bg-color");
+    }
+
+    border: 1px solid #ffffff12;
+    margin-top: 25px;
+    padding: 5px;
+    min-height: 504px;
+
+    .ui-tabs-tabPanel {
+        padding: 50px;
+    }
+}

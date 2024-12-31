@@ -1,0 +1,114 @@
+@import "styles/mixin/theme";
+
+$themes: (light: (project-tokenomics-bg-color: var(--color-gray-2),
+    ),
+    dark: (project-tokenomics-bg-color: var(--color-white),
+    ),
+);
+
+.project-tokenomics {
+    justify-content: space-around;
+
+    &-supply {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+        &-chart {
+            display: flex;
+            justify-content: center;
+        }
+
+        &-items {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 30px;
+
+            &-item {
+                display: flex;
+                justify-content: space-between;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid #626262;
+                }
+
+                padding: 10px 0;
+
+                &-label {
+                    color: var(--color-white);
+                    font-size: var(--font-size-md);
+                }
+
+                &-value {
+                    color: var(--color-white);
+                    font-size: var(--font-size-md);
+                }
+            }
+        }
+    }
+
+    &-details {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
+        height: 100%;
+        justify-content: center;
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+
+            &:not(:last-child) {
+                border-bottom: 1px solid #626262;
+            }
+
+            padding: 10px 0;
+
+            &-label {
+                display: flex;
+                color: var(--color-white);
+                font-size: var(--font-size-md);
+
+                &::before {
+                    content: "•";
+                    width: 1em;
+                    font-size: 35px;
+                    margin-top: -10px;
+                }
+
+                &-point {}
+
+                &-percent {}
+
+                &-text {
+                    padding-left: 10px;
+                }
+            }
+
+            &:first-child &-label::before {
+                color: #345983;
+            }
+
+            &:nth-child(2) &-label::before {
+                color: #5081b9;
+            }
+
+            &:nth-child(3) &-label::before {
+                color: #7ca1cb;
+            }
+
+            &:nth-child(4) &-label::before {
+                color: #136743;
+            }
+
+            &:nth-child(5) &-label::before {
+                color: #1c9b64;
+            }
+
+            &-value {
+                color: var(--color-white);
+                font-size: var(--font-size-md);
+            }
+        }
+    }
+}

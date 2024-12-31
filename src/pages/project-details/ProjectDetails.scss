@@ -1,0 +1,21 @@
+@import "styles/mixin/theme";
+
+$themes: (light: (project-details-bg-color: var(--color-gray-2),
+    ),
+    dark: (project-details-bg-color: var(--color-white),
+    ),
+);
+
+.project-details {
+    margin: auto;
+    max-width: 1200px;
+
+    &-link {
+        width: 156px !important;
+        height: 35px;
+    }
+
+    @include themify() {
+        // background-color: themed("project-details-bg-color");
+    }
+}

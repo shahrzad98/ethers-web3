@@ -1,0 +1,29 @@
+@import "styles/mixin/theme";
+
+$themes: (
+    light: (
+        project-all-bg-color: var(--color-gray-2),
+    ),
+    dark: (
+        project-all-bg-color: var(--color-white),
+    ),
+);
+
+.project-all {
+    margin: auto;
+    max-width: 1200px;
+    .ui-table-head {
+        .ui-table-cell {
+            > span {
+                display: flex;
+                text-align: left;
+            }
+        }
+    }
+
+    .ui-table-body {
+        .ui-table-cell {
+            text-align: left;
+        }
+    }
+}

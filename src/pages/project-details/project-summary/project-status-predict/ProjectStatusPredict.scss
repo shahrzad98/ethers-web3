@@ -1,0 +1,85 @@
+@import "styles/mixin/theme";
+
+$themes: (
+    light: (
+        project-status-predict-bg-color: var(--color-gray-2),
+    ),
+    dark: (
+        project-status-predict-bg-color: var(--color-white),
+    ),
+);
+
+.project-status-predict {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(180deg, #1f242b 100%, #212730 0%);
+    padding: 20px 40px;
+    min-height: 287px;
+    max-width: 419px;
+    float: right;
+    border: 1px solid #323740;
+
+    .ui-button {
+        min-height: 37px;
+    }
+
+    &-status {
+        display: flex;
+        width: 100%;
+
+        justify-content: flex-end;
+
+        .ui-label {
+            width: 130px !important;
+            padding: 8px !important;
+            font-size: 15px;
+        }
+    }
+
+    .connect-wallet {
+        width: 100%;
+    }
+
+    &-timer {
+        .ui-timer {
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &-time {
+    }
+
+    &-progress {
+        width: 100%;
+    }
+
+    &-actions {
+        width: 100%;
+        display: flex;
+
+        &-prediction {
+            text-align: center;
+            border: 1px solid white;
+            border-radius: 10px;
+            padding: 10px 15px;
+            width: 100%;
+        }
+    }
+
+    &-link {
+        color: #8e9092;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}

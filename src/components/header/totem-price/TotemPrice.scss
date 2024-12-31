@@ -1,0 +1,24 @@
+@import "styles/mixin/theme";
+
+$themes: (
+    light: (
+        totem-price-bg-color: #222222,
+    ),
+    dark: (
+        totem-price-bg-color: #222222,
+    ),
+);
+
+.totem-price {
+    min-width: 138px;
+    height: 31px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+
+    @include themify() {
+        background-color: themed("totem-price-bg-color");
+    }
+}

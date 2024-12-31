@@ -1,0 +1,38 @@
+@import "styles/mixin/theme";
+
+$themes: (light: (claim-modal-bg-color: var(--color-gray-2),
+    ),
+    dark: (claim-modal-bg-color: var(--color-white),
+    ),
+);
+
+
+
+.unstake-confirm-modal {
+    &-details {
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px;
+            background-color: var(--color-gray-3);
+            padding: 15px;
+
+            &-label {
+                color: var(--color-white);
+            }
+
+            &-value {
+                color: var(--color-primary) !important;
+            }
+
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+    }
+}

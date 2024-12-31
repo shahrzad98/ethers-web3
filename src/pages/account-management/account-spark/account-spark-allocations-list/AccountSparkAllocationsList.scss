@@ -1,0 +1,43 @@
+@import "styles/mixin/theme";
+
+$themes: (light: (account-spark-allocations-list-bg-color: var(--color-gray-2),
+    ),
+    dark: (account-spark-allocations-list-bg-color: var(--color-white),
+    ),
+);
+
+.account-spark-allocations-list {
+    margin: 8.5px 0;
+
+    .ui-table {
+        min-height: 580px;
+    }
+
+    .ui-table-head {
+        .ui-table-cell {
+            text-align: left;
+
+            >span {
+                display: flex;
+                // padding-left: 15px;
+                color: #8e9092;
+            }
+
+            &:first-child {
+                span {
+                    margin-left: 26px;
+                }
+            }
+        }
+    }
+
+    .ui-table-body {
+        .ui-table-cell {
+            text-align: left;
+
+            >span {
+                // padding-left: 15px;
+            }
+        }
+    }
+}

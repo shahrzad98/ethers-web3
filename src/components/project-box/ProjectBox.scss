@@ -1,0 +1,72 @@
+@import "styles/mixin/theme";
+
+$themes: (
+    light: (),
+    dark: (),
+);
+
+.project-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 499px;
+    width: 100%;
+    min-height: 218px;
+    border: 1px solid #ffffff12;
+    margin: 7.5px;
+    padding: 15px;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+
+        &-title {
+            display: flex;
+            align-items: center;
+
+            h1 {
+                padding: 0 15px;
+                color: var(--box-title-color);
+                font-weight: 700;
+                font-size: 24px;
+            }
+        }
+
+        &-status {
+            display: flex;
+            align-items: center;
+
+            .ui-label {
+                width: 130px !important;
+                padding: 8px !important;
+                font-size: 15px;
+            }
+        }
+    }
+
+    &-timer {
+        margin: auto;
+    }
+
+    &-options {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+
+        &-item {
+            &-label {
+                color: var(--box-key-label-color);
+                font-size: var(--box-key-label-size);
+            }
+
+            &-value {
+                color: var(--box-key-value-color);
+                font-size: var(--box-key-value-size);
+            }
+        }
+    }
+
+    &-progress {
+        padding: 0px 45px;
+    }
+}

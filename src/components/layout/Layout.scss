@@ -1,0 +1,60 @@
+@import "styles/mixin/theme";
+
+$themes: (light: (layout-bg-color: #121212,
+        layout-color: var(--color-gray-1),
+    ),
+    dark: (layout-bg-color: #121212,
+        layout-color: var(--color-white),
+    ),
+);
+
+.layout {
+    background-image: url("../../assets/images/background-dark.png");
+
+    // background-image: radial-gradient(90deg,
+    //         lighten(#E13461, 0%) 0%,
+    //         lighten(#000000, 100%) 33%,
+    //     );
+
+
+    // background-image: radial-gradient(#E13461, #000000);
+
+    @include themify() {
+        background-color: themed("layout-bg-color");
+    }
+
+    background-repeat: repeat,
+    repeat;
+
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    min-height: 100%;
+
+    @include themify() {
+        color: themed("layout-color");
+    }
+
+    &-main {
+        //    display: flex;
+        height: calc(100vh - 85px);
+
+        // overflow-x: hidden;
+
+        overflow-y: auto;
+
+        @media (min-width: 0) and (max-width: 1300px) {
+            width: 90%;
+            margin: auto;
+            height: 100%;
+            overflow-y: hidden;
+        }
+
+        &-content {
+            @media (min-width: 1200px) {
+                margin-left: 70px;
+                width: calc(100% - 70px);
+            }
+        }
+    }
+}

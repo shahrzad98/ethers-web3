@@ -1,0 +1,46 @@
+@import "styles/mixin/theme";
+
+$themes: (
+    light: (
+        project-overview-bg-color: var(--color-gray-2),
+    ),
+    dark: (
+        project-overview-bg-color: var(--color-white),
+    ),
+);
+
+.project-overview {
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    // align-items: center;
+
+    margin: auto;
+    max-width: 1028px;
+
+    &-logo {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    margin-top: 10px;
+
+    @include themify() {
+        // background-color: themed("project-overview-bg-color");
+    }
+
+    &-link {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 25px;
+        button {
+            max-width: 400px;
+            min-height: 18px;
+            font-size: 15px;
+            margin-left: 7.5px;
+        }
+    }
+}

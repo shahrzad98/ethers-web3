@@ -1,0 +1,112 @@
+@import "styles/mixin/theme";
+
+$themes: (
+    light: (
+        account-summary-balance-box-bg-color: var(--color-gray-2),
+    ),
+    dark: (
+        account-summary-balance-box-bg-color: var(--color-white),
+    ),
+);
+
+.account-summary-balance-box {
+    display: flex;
+    height: 100%;
+    padding: 0 15px;
+
+    &-chart {
+        display: flex;
+        align-items: center;
+    }
+
+    &-balance {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .ui-currency {
+            span {
+                font-weight: bold;
+
+                .ui-currency-after-unit {
+                    font-size: 15px;
+                    margin: 5px 4px;
+                }
+            }
+        }
+
+        &-total {
+            display: flex;
+            flex-direction: column;
+            align-items: baseline;
+
+            &-label {
+                display: flex;
+                padding-bottom: 5px;
+                color: gray;
+                font-size: 14px;
+            }
+        }
+
+        &-details {
+            display: flex;
+            margin-top: 5px;
+            position: relative;
+
+            .ui-currency {
+                span {
+                    font-weight: bold;
+
+                    .ui-currency-after-unit {
+                        font-size: 15px;
+                        margin: 5px 4px;
+                        position: absolute;
+                    }
+                }
+            }
+
+            @media (min-width: 0) and (max-width: 767px) {
+                flex-direction: column;
+            }
+
+            &-available {
+                display: flex;
+                flex-direction: column;
+
+                @media (min-width: 0) and (max-width: 767px) {
+                    padding-top: 15px;
+                }
+
+                &-label {
+                    display: flex;
+                    color: gray;
+                    font-size: 14px;
+                    padding-right: 5px;
+
+                    &-value {
+                        padding-right: 5px;
+                    }
+                }
+            }
+
+            &-staked {
+                display: flex;
+                flex-direction: column;
+
+                @media (min-width: 0) and (max-width: 767px) {
+                    padding-top: 15px;
+                }
+
+                &-label {
+                    display: flex;
+                    color: gray;
+                    font-size: 14px;
+
+                    &-value {
+                        padding-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "_comment_networks": {
+        "1": "mainnet",
+        "5": "goerli",
+        "3": "ropsten",
+        "4": "rinkeby",
+        "56": "bsc"
+    },
+    "_comment_rpcUrls": {
+        "1": "https://mainnet.infura.io/v3/84842078b09946638c03157f83405213",
+        "4": "https://rinkeby.infura.io/v3/84842078b09946638c03157f83405213"
+    },
+    "networks": {
+        "56": "bsc"
+    },
+    "rpcUrls": {
+        "56": "https://bsc-dataseed.binance.org/",
+        "1": "https://mainnet.infura.io/v3/84842078b09946638c03157f83405213",
+        "4": "https://rinkeby.infura.io/v3/84842078b09946638c03157f83405213"
+    },
+    "offchain": {
+        "spark": "https://dev-offchain-spark.totemfi.com/api/v1/",
+        "predictor": "https://offchain.totemfi.com/"
+    },
+    "subgraph": {
+        "56": {
+            "spark": "https://graph-dev.totemfi.com/subgraphs/name/totemfi/spark",
+            "predictor": "https://graph.totemfi.com/subgraphs/name/totemfi/predictor"
+        }
+    },
+    "contractAddress": {
+        "56": {
+            "TotemToken": "0xf2cf56fBE1Ae8E40f0e0D8672305c3bB115625A2",
+            "USDCToken": "0x78867bbeef44f2326bf8ddd1941a4439382ef2a7",
+            "IDOTokenBank": "0xE1De00D63864fc502380852278d0Be8af2294115",
+            "IDOPredictionPoolFactory": "0xF5A7D8A87c03030d0f06a3Debdc5641C505f126C"
+        }
+    },
+    "transactionEndpoint": "https://bscscan.com/tx"
+}

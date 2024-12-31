@@ -1,0 +1,19 @@
+@import "styles/mixin/theme";
+
+$themes: (light: (project-all-list-bg-color: var(--color-gray-2),
+    ),
+    dark: (project-all-list-bg-color: var(--color-white),
+    ),
+);
+
+.project-all-list {
+    margin-top: 10px;
+
+    .ui-table {
+        min-height: 762px;
+    }
+
+    @include themify() {
+        // background-color: themed("project-all-list-bg-color");
+    }
+}

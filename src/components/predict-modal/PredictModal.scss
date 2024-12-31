@@ -1,0 +1,183 @@
+@import "styles/mixin/theme";
+
+$themes: (
+    light: (
+        predict-modal-bg-color: var(--color-gray-2),
+    ),
+    dark: (
+        predict-modal-bg-color: var(--color-white),
+    ),
+);
+
+.predict-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    .ui-input {
+        width: 246px;
+    }
+
+    &-stake {
+        width: 100%;
+
+        &-label {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+        }
+
+        &-input {
+            margin: 20px auto;
+        }
+
+        &-slider {
+            max-width: 292px;
+            margin: auto !important;
+        }
+
+        &-slider-tier {
+            margin: 70px auto 5px auto;
+            max-width: 227px;
+            .ui-tooltip {
+                width: 100%;
+
+                .ui-tooltip-box {
+                    visibility: visible !important;
+                    background: #50555c !important;
+                    top: -70px !important;
+
+                    .ui-tooltip-title {
+                        color: white !important;
+                        line-height: 20px !important;
+                    }
+
+                    .ui-tooltip-description {
+                        color: #969ca6 !important;
+                    }
+
+                    &::after {
+                        border-color: #50555c transparent transparent transparent !important;
+                    }
+                }
+
+                .ui-slider-range-passed {
+                    background: #c2c2c26e !important;
+                }
+            }
+
+            .ui-slider-range-presentation-item-value {
+                color: #6e7278;
+            }
+        }
+    }
+
+    &-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .radio__label {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        &-label {
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        &-items {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 25px;
+            margin-left: -20px;
+
+            &-input {
+                margin-top: -12px;
+            }
+
+            visibility: 100;
+
+            &-minus {
+                margin-right: -20px;
+            }
+        }
+
+        &-slider {
+            margin: 10px auto !important;
+            max-width: 292px;
+        }
+
+        &-plus {
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            color: #8e9092;
+            font-size: 14px;
+        }
+    }
+
+    .hide-input {
+        .ui-component-radio {
+            .radio__input {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.confirm-modal {
+    &-logo {
+        margin-top: -15px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    &-details {
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px;
+            background-color: var(--color-gray-3);
+            padding: 15px;
+
+            &-label {
+                color: var(--color-white);
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            &-value {
+                color: var(--color-primary) !important;
+            }
+
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+        &-txid {
+            margin: auto;
+            padding-top: 20px;
+        }
+    }
+}

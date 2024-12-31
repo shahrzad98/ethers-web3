@@ -1,0 +1,38 @@
+@import "styles/mixin/theme";
+
+$themes: (
+    light: (),
+    dark: (),
+);
+
+.project-row {
+    cursor: pointer;
+    height: 70px;
+
+    &-title {
+        display: flex;
+        align-items: center;
+        color: var(--box-title-color);
+
+        h1 {
+            // padding: 0 15px;
+        }
+    }
+
+    &-status {
+        display: flex;
+        justify-content: center;
+        // margin: auto;
+
+        &.ui-label {
+            width: 130px !important;
+            padding: 8px !important;
+            font-size: 15px;
+        }
+    }
+
+    &-progress {
+        min-width: 250px;
+        margin-bottom: -30px;
+    }
+}
