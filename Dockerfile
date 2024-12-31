@@ -13,10 +13,10 @@ RUN apt update
 RUN apt install git
 RUN apt install build-essential
 # cache dependencies
-RUN echo "//npm.pkg.github.com/:_authToken=$NPM_AUTH_TOKEN" >> .npmrc
-RUN echo "@totemfi:registry=https://npm.pkg.github.com" >> .npmrc
-RUN echo "//npm.pkg.github.com/:_authToken=$NPM_AUTH_TOKEN" >> .yarnrc
-RUN echo "@totemfi:registry=https://npm.pkg.github.com" >> .yarnrc
+RUN echo "//npm.pkg.github.com/:_authToken=$NPM_AUTH_TOKEN" >> npmrc-local
+RUN echo "@totemfi:registry=https://npm.pkg.github.com" >> npmrc-local
+RUN echo "//npm.pkg.github.com/:_authToken=$NPM_AUTH_TOKEN" >> yarnrc-local
+RUN echo "@totemfi:registry=https://npm.pkg.github.com" >> yarnrc-local
 COPY package.json ./
 COPY yarn.lock ./
 RUN yarn install
